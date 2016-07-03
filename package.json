@@ -1,5 +1,5 @@
 {
-  "name": "ng2-tooltop",
+  "name": "ng2-tooltip",
   "version": "0.1.0",
   "description": "Angular2 Tooltip Directive",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsvalley/ng2-tooltop.git"
+    "url": "git+https://github.com/jsvalley/ng2-tooltip.git"
   },
   "keywords": [
     "angular2",
@@ -18,7 +18,7 @@
   "author": "allenhwkim@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jsvalley/ng2-tooltop/issues"
+    "url": "https://github.com/jsvalley/ng2-tooltip/issues"
   },
-  "homepage": "https://github.com/jsvalley/ng2-tooltop#readme"
+  "homepage": "https://github.com/jsvalley/ng2-tooltip#readme"
 }
