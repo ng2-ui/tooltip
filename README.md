@@ -1,21 +1,21 @@
 # ng2-tooltip
 Angular2 tooltip directive
 
-<a href="https://plnkr.co/edit/Yq78qE?p=preview">
+<a href="https://plnkr.co/edit/qmmUxn?p=preview">
   <img src="http://i.imgur.com/0qcxg8X.png" width="50% border="1" />
 </a>
 
 ## Install
 
-1. install ng2-tooltip
+1. install ng2-tooltip-overlay
 
-        $ npm install ng2-tooltip --save
+        $ npm install ng2-tooltip-overlay --save
 
 2. add `map` and `packages` to your `systemjs.config.js`
 
-        map['ng2-tooltip = 'node_modules/ng2-tooltip'
-        packages['ng2-tooltip = { main: 'dist/index.js', defaultExtension: 'js']
-        
+        map['ng2-tooltip-overlay'] = 'node_modules/ng2-tooltip-overlay'
+        packages['ng2-tooltip-overlay'] = { main: 'dist/index.js', defaultExtension: 'js']
+
 3.  add ng2-tooltip.css into your html
 
         <link rel="stylesheet" href="ng2-tooltip.css" />
@@ -25,7 +25,7 @@ Angular2 tooltip directive
 
 1. import and add directive in your component
 
-        import { Ng2TooltipDirective } from 'ng2-tooltip';
+        import { Ng2TooltipDirective } from 'ng2-tooltip-overlay';
 
         @Component({
           selector: 'my-app',
