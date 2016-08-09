@@ -1,9 +1,11 @@
 # ng2-tooltip-overlay
 Angular2 tooltip directive
 
-<a href="https://plnkr.co/edit/qmmUxn?p=preview">
+<a href="https://ng2-ui.github.io/#/tooltip">
   <img src="http://i.imgur.com/ezWv5Jw.png" width="50% border="1" />
 </a>
+
+Plunker Example: https://plnkr.co/edit/qmmUxn?p=preview
 
 ## Install
 
