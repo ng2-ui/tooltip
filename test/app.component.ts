@@ -1,6 +1,4 @@
-import {Component, Type} from '@angular/core'
-import { Ng2TooltipDirective } from 'ng2-tooltip';
-import { OverlayManager } from 'ng2-overlay';
+import {Component, Type} from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -15,8 +13,6 @@ import { OverlayManager } from 'ng2-overlay';
       </div>
     </div>
     `,
-  providers: [OverlayManager],
-  directives: [<Type>Ng2TooltipDirective],
   styles: [`
     *[ng2-tooltip] {margin: 40px; border: 1px solid #ccc }
  `],

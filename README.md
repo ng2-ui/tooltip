@@ -15,8 +15,30 @@ Plunker Example: https://plnkr.co/edit/qmmUxn?p=preview
 
 2. add `map` and `packages` to your `systemjs.config.js`
 
-        map['ng2-tooltip-overlay'] = 'node_modules/ng2-tooltip-overlay'
-        packages['ng2-tooltip-overlay'] = { main: 'dist/index.js', defaultExtension: 'js']
+        map['ng2-tooltip-overlay'] = 'node_modules/ng2-tooltip-overlay/dist';
+        packages['ng2-tooltip-overlay'] = { main: 'index.js', defaultExtension: 'js' }
+
+3. import Ng2TooltipOverlay to your AppModule
+
+        import { NgModule } from '@angular/core';
+        import { FormsModule } from "@angular/forms";
+        import { BrowserModule  } from '@angular/platform-browser';
+        import { AppComponent } from './app.component';
+        import { Ng2TooltipOverlay } from 'ng2-tooltip-overlay';
+        
+        @NgModule({
+          imports: [BrowserModule, FormsModule, Ng2TooltipOverlay],
+          declarations: [AppComponent],
+          bootstrap: [ AppComponent ]
+        })
+        export class AppModule { }
+
+         
+For full example, please check out `test` directory to see the example of;
+
+  - `systemjs.config.js`
+  - `app.module.ts`
+  -  and `app.component.ts`.
 
 3.  add ng2-tooltip.css into your html
 
@@ -24,20 +46,28 @@ Plunker Example: https://plnkr.co/edit/qmmUxn?p=preview
 
 ## Usage it in your code
 
-1. import and add directive in your component
+     <div tooltip="This is my tooltip">
+        Move mouse over here to see the tooltip
+     </div>
 
-        import { Ng2TooltipDirective } from 'ng2-tooltip-overlay';
+## **ng2-ui** welcomes new members and contributors
 
-        @Component({
-          selector: 'my-app',
-          templateUrl: './app/app.tpl.html',
-          directives: [ Ng2TooltipDirective ]
-        })
+This module is only improved and maintained by contributors like you.
 
+As a contributor, it's NOT required to be skilled in Javascript nor Angular2. 
+You are only to be open-minded and interested in helping others.
+As a contributor, you do following;
 
-2. You are ready. use it in your template
+  * Updating README.md
+  * Improving code comments
+  * Answering issues and building FAQ
+  * Documentation
+  * Translation
 
-        <div tooltip="This is my tooltip">
-          Move mouse over here to see the tooltip
-        </div>
+In result of your active contribution, you will be listed as a core contributor
+on https://ng2-ui.github.io, and a member of ng2-ui too.
+
+If you are interested in becoming a contributor and/or a member of ng-ui,
+please send me email to `allenhwkim AT gmail.com` with your github id. 
+
 
