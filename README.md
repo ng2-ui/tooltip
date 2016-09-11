@@ -16,7 +16,7 @@ Plunker Example: https://plnkr.co/edit/qmmUxn?p=preview
 2. add `map` and `packages` to your `systemjs.config.js`
 
         map['ng2-tooltip-overlay'] = 'node_modules/ng2-tooltip-overlay/dist';
-        packages['ng2-tooltip-overlay'] = { main: 'index.js', defaultExtension: 'js' }
+        packages['ng2-tooltip-overlay'] = { main: 'ng2-tooltip-overlay.umd.js', defaultExtension: 'js' }
 
 3. import Ng2TooltipOverlay to your AppModule
 

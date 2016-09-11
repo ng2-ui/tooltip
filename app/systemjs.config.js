@@ -19,9 +19,9 @@
   };
 
   map['ng2-tooltip-overlay'] = '../dist';
-  packages['ng2-tooltip-overlay'] = {main: 'index.js', defaultExtension: 'js'};
-  map['ng2-tooltip-overlay'] = '../src';
-  packages['ng2-tooltip-overlay'] = {main: 'index.ts', defaultExtension: 'ts'};
+  packages['ng2-tooltip-overlay'] = {main: 'ng2-tooltip-overlay.umd.js', defaultExtension: 'js'};
+  // map['ng2-tooltip-overlay'] = '../src';
+  // packages['ng2-tooltip-overlay'] = {main: 'index.ts', defaultExtension: 'ts'};
 
   System.config({
     transpiler: 'typescript', //use typescript for compilation
