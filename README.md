@@ -42,7 +42,7 @@ For full example, please check out `test` directory to see the example of;
 
 3.  add ng2-tooltip.css into your html
 
-        <link rel="stylesheet" href="https://npmcdn.com/ng2-tooltip-overlay/dist/ng2-tooltip.css" />
+        <link rel="stylesheet" href="https://unpkg.com/ng2-tooltip-overlay/dist/ng2-tooltip.css" />
 
 ## Usage it in your code
 
