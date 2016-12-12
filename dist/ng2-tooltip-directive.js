@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var ng2_overlay_1 = require('ng2-overlay');
+var core_1 = require("@angular/core");
+var ng2_overlay_1 = require("ng2-overlay");
 var Ng2TooltipDirective = (function () {
     function Ng2TooltipDirective(viewContainerRef, overlayManager) {
         this.viewContainerRef = viewContainerRef;
@@ -35,28 +35,29 @@ var Ng2TooltipDirective = (function () {
         tooltipEl.appendChild(divEl);
         //el.parentElement.insertBefore(tooltipEl, el.nextSibling);
         el.appendChild(tooltipEl);
-        var overlay = new ng2_overlay_1.Overlay(tooltipEl, {
+        var overlay = new ng2_overlay_1.Ng2Overlay(tooltipEl, {
             id: 'tooltip-' + (el.id || Math.floor(Math.random() * 1000000)),
             position: 'top cursor outside'
         });
         this.overlayManager.register(overlay);
         return overlay;
     };
-    __decorate([
-        core_1.Input('ng2-tooltip'), 
-        __metadata('design:type', String)
-    ], Ng2TooltipDirective.prototype, "tooltip", void 0);
-    Ng2TooltipDirective = __decorate([
-        core_1.Directive({
-            selector: '[ng2-tooltip]',
-            host: {
-                '(mouseover)': 'showTooltip($event)',
-                '(mouseout)': 'hideTooltip($event)'
-            }
-        }), 
-        __metadata('design:paramtypes', [core_1.ViewContainerRef, ng2_overlay_1.OverlayManager])
-    ], Ng2TooltipDirective);
     return Ng2TooltipDirective;
 }());
+__decorate([
+    core_1.Input('ng2-tooltip'),
+    __metadata("design:type", String)
+], Ng2TooltipDirective.prototype, "tooltip", void 0);
+Ng2TooltipDirective = __decorate([
+    core_1.Directive({
+        selector: '[ng2-tooltip]',
+        host: {
+            '(mouseover)': 'showTooltip($event)',
+            '(mouseout)': 'hideTooltip($event)'
+        }
+    }),
+    __metadata("design:paramtypes", [core_1.ViewContainerRef,
+        ng2_overlay_1.Ng2OverlayManager])
+], Ng2TooltipDirective);
 exports.Ng2TooltipDirective = Ng2TooltipDirective;
 //# sourceMappingURL=ng2-tooltip-directive.js.map
