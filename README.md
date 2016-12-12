@@ -1,7 +1,7 @@
 # ng2-tooltip-overlay
 Angular2 tooltip directive
 
-<a href="https://ng2-ui.github.io/#/tooltip">
+<a href="https://rawgit.com/ng2-ui/ng2-tooltip-overlay/master/app/index.html">
   <img src="http://i.imgur.com/ezWv5Jw.png" width="50% border="1" />
 </a>
 

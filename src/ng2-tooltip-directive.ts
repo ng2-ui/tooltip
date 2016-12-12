@@ -1,6 +1,6 @@
 import { Directive, ViewContainerRef, Input } from '@angular/core';
 
-import {OverlayManager, Overlay} from 'ng2-overlay';
+import {Ng2OverlayManager, Ng2Overlay} from 'ng2-overlay';
 
 @Directive({
   selector: '[ng2-tooltip]',
@@ -14,11 +14,11 @@ export class Ng2TooltipDirective {
   @Input('ng2-tooltip') tooltip: string;
 
   el: HTMLElement;
-  overlay: Overlay;
+  overlay: Ng2Overlay;
 
   constructor(
     public viewContainerRef: ViewContainerRef,
-    public overlayManager: OverlayManager
+    public overlayManager: Ng2OverlayManager
   ) {
     this.el = this.viewContainerRef.element.nativeElement;
   }
@@ -50,7 +50,7 @@ export class Ng2TooltipDirective {
     //el.parentElement.insertBefore(tooltipEl, el.nextSibling);
     el.appendChild(tooltipEl);
 
-    let overlay = new Overlay(tooltipEl, {
+    let overlay = new Ng2Overlay(tooltipEl, {
       id: 'tooltip-' + (el.id || Math.floor(Math.random()*1000000)),
       position: 'top cursor outside'
     });
