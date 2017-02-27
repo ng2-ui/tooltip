@@ -5,7 +5,7 @@ Angular2 tooltip directive
   <img src="http://i.imgur.com/ezWv5Jw.png" width="50% border="1" />
 </a>
 
-Plunker Example: https://plnkr.co/edit/qmmUxn?p=preview
+Plunker Example: https://plnkr.co/edit/6reiaH?p=preview
 
 ## Install
 
