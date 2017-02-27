@@ -55,8 +55,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var ng2_tooltip_directive_1 = __webpack_require__(1);
-	exports.Ng2TooltipDirective = ng2_tooltip_directive_1.Ng2TooltipDirective;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var ng2_tooltip_component_1 = __webpack_require__(1);
+	exports.Ng2TooltipComponent = ng2_tooltip_component_1.Ng2TooltipComponent;
 	var ng2_tooltip_overlay_module_1 = __webpack_require__(6);
 	exports.Ng2TooltipOverlayModule = ng2_tooltip_overlay_module_1.Ng2TooltipOverlayModule;
 
@@ -75,26 +76,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	var __metadata = (this && this.__metadata) || function (k, v) {
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
+	Object.defineProperty(exports, "__esModule", { value: true });
 	var core_1 = __webpack_require__(2);
 	var ng2_overlay_1 = __webpack_require__(3);
-	var Ng2TooltipDirective = (function () {
-	    function Ng2TooltipDirective(viewContainerRef, overlayManager) {
+	var Ng2TooltipComponent = (function () {
+	    function Ng2TooltipComponent(viewContainerRef, ng2OverlayManager) {
 	        this.viewContainerRef = viewContainerRef;
-	        this.overlayManager = overlayManager;
+	        this.ng2OverlayManager = ng2OverlayManager;
 	        this.el = this.viewContainerRef.element.nativeElement;
 	    }
-	    Ng2TooltipDirective.prototype.ngAfterViewInit = function () {
-	        this.overlay = this.getTooltipOverlay(this.el, this.tooltip);
+	    Ng2TooltipComponent.prototype.ngAfterViewInit = function () {
+	        this.ng2Overlay = this.getTooltipOverlay(this.el, this.tooltip);
 	    };
-	    Ng2TooltipDirective.prototype.showTooltip = function ($event) {
-	        this.overlayManager.open(this.overlay, $event);
+	    Ng2TooltipComponent.prototype.showTooltip = function ($event) {
+	        this.ng2OverlayManager.open(this.ng2Overlay, $event);
 	        $event.stopPropagation();
 	    };
-	    Ng2TooltipDirective.prototype.hideTooltip = function ($event) {
-	        this.overlayManager.close(this.overlay);
+	    Ng2TooltipComponent.prototype.hideTooltip = function ($event) {
+	        this.ng2OverlayManager.close(this.ng2Overlay);
 	        $event.stopPropagation();
 	    };
-	    Ng2TooltipDirective.prototype.getTooltipOverlay = function (el, tooltip) {
+	    Ng2TooltipComponent.prototype.getTooltipOverlay = function (el, tooltip) {
 	        var tooltipEl = document.createElement('ng2-tooltip');
 	        tooltipEl.style.display = 'none';
 	        var divEl = document.createElement('div');
@@ -102,31 +104,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	        tooltipEl.appendChild(divEl);
 	        //el.parentElement.insertBefore(tooltipEl, el.nextSibling);
 	        el.appendChild(tooltipEl);
-	        var overlay = new ng2_overlay_1.Ng2Overlay(tooltipEl, {
+	        var ng2Overlay = new ng2_overlay_1.Ng2Overlay(tooltipEl, {
 	            id: 'tooltip-' + (el.id || Math.floor(Math.random() * 1000000)),
 	            position: 'top cursor outside'
 	        });
-	        this.overlayManager.register(overlay);
-	        return overlay;
+	        this.ng2OverlayManager.register(ng2Overlay);
+	        return ng2Overlay;
 	    };
-	    return Ng2TooltipDirective;
+	    return Ng2TooltipComponent;
 	}());
 	__decorate([
 	    core_1.Input('ng2-tooltip'),
 	    __metadata("design:type", String)
-	], Ng2TooltipDirective.prototype, "tooltip", void 0);
-	Ng2TooltipDirective = __decorate([
-	    core_1.Directive({
+	], Ng2TooltipComponent.prototype, "tooltip", void 0);
+	Ng2TooltipComponent = __decorate([
+	    core_1.Component({
 	        selector: '[ng2-tooltip]',
+	        template: '<ng-content></ng-content>',
 	        host: {
 	            '(mouseover)': 'showTooltip($event)',
 	            '(mouseout)': 'hideTooltip($event)'
-	        }
+	        },
+	        styles: ["\n    ng2-tooltip .tooltip-contents {\n      border: 1px solid #ccc; padding: 5px\n    }\n    ng2-tooltip .tooltip-down-arrow {\n      height: 10px;\n    }\n    ng2-tooltip .tooltip-down-arrow:before {\n      content: '';\n      display: block;\n      position: absolute;\n      width: 10px;\n      height: 10px;\n      left: 45%;\n      bottom: 5px;\n      background: #FFFFFF;\n      border-left:1px solid #ccc;\n      border-bottom:1px solid #ccc;\n      transform:rotate(-45deg);\n    }\n  "],
+	        encapsulation: core_1.ViewEncapsulation.None
 	    }),
 	    __metadata("design:paramtypes", [core_1.ViewContainerRef,
 	        ng2_overlay_1.Ng2OverlayManager])
-	], Ng2TooltipDirective);
-	exports.Ng2TooltipDirective = Ng2TooltipDirective;
+	], Ng2TooltipComponent);
+	exports.Ng2TooltipComponent = Ng2TooltipComponent;
 
 
 /***/ },
@@ -548,6 +553,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		var forms_1 = __webpack_require__(7);
 		var common_1 = __webpack_require__(8);
 		var ng2_overlay_manager_1 = __webpack_require__(3);
+		exports.Ng2OverlayManager = ng2_overlay_manager_1.Ng2OverlayManager;
 		var ng2_overlay_directive_1 = __webpack_require__(5);
 		var Ng2OverlayModule = (function () {
 		    function Ng2OverlayModule() {
@@ -608,14 +614,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
+	Object.defineProperty(exports, "__esModule", { value: true });
 	var core_1 = __webpack_require__(2);
 	var forms_1 = __webpack_require__(4);
 	var common_1 = __webpack_require__(5);
 	var ng2_overlay_1 = __webpack_require__(3);
-	var ng2_tooltip_directive_1 = __webpack_require__(1);
+	var ng2_tooltip_component_1 = __webpack_require__(1);
 	var Ng2TooltipOverlayModule = (function () {
 	    function Ng2TooltipOverlayModule() {
 	    }
@@ -624,10 +628,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	Ng2TooltipOverlayModule = __decorate([
 	    core_1.NgModule({
 	        imports: [common_1.CommonModule, forms_1.FormsModule, ng2_overlay_1.Ng2OverlayModule],
-	        declarations: [ng2_tooltip_directive_1.Ng2TooltipDirective],
-	        exports: [ng2_tooltip_directive_1.Ng2TooltipDirective]
-	    }),
-	    __metadata("design:paramtypes", [])
+	        declarations: [ng2_tooltip_component_1.Ng2TooltipComponent],
+	        exports: [ng2_tooltip_component_1.Ng2TooltipComponent]
+	    })
 	], Ng2TooltipOverlayModule);
 	exports.Ng2TooltipOverlayModule = Ng2TooltipOverlayModule;
 
