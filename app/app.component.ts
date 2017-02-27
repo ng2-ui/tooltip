@@ -14,7 +14,7 @@ import {Component, Type} from '@angular/core';
     </div>
     `,
   styles: [`
-    *[ng2-tooltip] {margin: 40px; border: 1px solid #ccc }
+    div {margin: 40px; border: 1px solid #ccc }
  `],
 })
 export class AppComponent {
