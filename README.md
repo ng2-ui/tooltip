@@ -1,7 +1,7 @@
-# ng2-tooltip-overlay
-Angular2 tooltip directive
+# tooltip
+Angular2+ tooltip directive
 
-<a href="https://rawgit.com/ng2-ui/ng2-tooltip-overlay/master/app/index.html">
+<a href="https://rawgit.com/ng2-ui/tooltip/master/app/index.html">
   <img src="http://i.imgur.com/ezWv5Jw.png" width="50% border="1" />
 </a>
 
@@ -9,25 +9,24 @@ Plunker Example: https://plnkr.co/edit/6reiaH?p=preview
 
 ## Install
 
-1. install ng2-tooltip-overlay
+1. install @ngitooltip
 
-        $ npm install ng2-tooltip-overlay --save
+        $ npm install @ngui/tooltip --save
 
 2. add `map` and `packages` to your `systemjs.config.js`
 
-        map['ng2-tooltip-overlay'] = 'node_modules/ng2-tooltip-overlay/dist';
-        packages['ng2-tooltip-overlay'] = { main: 'ng2-tooltip-overlay.umd.js', defaultExtension: 'js' }
+        map['@ngui/tooltip'] = 'node_modules/@ngui/tooltip/dist/tooltip.umd.js';
 
-3. import Ng2TooltipOverlay to your AppModule
+3. import NguiTooltipOverlay to your AppModule
 
         import { NgModule } from '@angular/core';
         import { FormsModule } from "@angular/forms";
         import { BrowserModule  } from '@angular/platform-browser';
         import { AppComponent } from './app.component';
-        import { Ng2TooltipOverlay } from 'ng2-tooltip-overlay';
+        import { NguiTooltipModule } from '@ngui/tooltip';
         
         @NgModule({
-          imports: [BrowserModule, FormsModule, Ng2TooltipOverlay],
+          imports: [BrowserModule, FormsModule, NguiTooltipModule],
           declarations: [AppComponent],
           bootstrap: [ AppComponent ]
         })
@@ -40,9 +39,9 @@ For full example, please check out `test` directory to see the example of;
   - `app.module.ts`
   -  and `app.component.ts`.
 
-3.  add ng2-tooltip.css into your html
+3.  add ngui-tooltip.css into your html
 
-        <link rel="stylesheet" href="https://unpkg.com/ng2-tooltip-overlay/dist/ng2-tooltip.css" />
+        <link rel="stylesheet" href="https://unpkg.com/ngui-tooltip-overlay/dist/ngui-tooltip.css" />
 
 ## Usage it in your code
 

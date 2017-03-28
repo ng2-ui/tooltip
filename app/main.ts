@@ -13,10 +13,10 @@ import { FormsModule }    from "@angular/forms";
 
 import { AppComponent }   from './app.component';
 //noinspection TypeScriptCheckImport
-import { Ng2TooltipOverlayModule }  from 'ng2-tooltip-overlay';
+import { NguiTooltipModule }  from '@ngui/tooltip';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, Ng2TooltipOverlayModule],
+  imports: [BrowserModule, FormsModule, NguiTooltipModule],
   declarations: [AppComponent],
   bootstrap: [ AppComponent ]
 })

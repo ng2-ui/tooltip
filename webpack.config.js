@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'ng2-tooltip-overlay': path.join(__dirname, 'src', 'index.ts')
+    '@ngui/tooltip': path.join(__dirname, 'src', 'index.ts')
   },
   resolve: {
     extensions: ['', '.ts', '.js', '.json', '.css', '.html']
@@ -13,8 +13,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: "[name].umd.js",
-    library: ["[name]"],
+    filename: "tooltip.umd.js",
+    library: ["tioltip"],
     libraryTarget: "umd"
   },
   externals: [
