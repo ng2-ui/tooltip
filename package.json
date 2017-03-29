@@ -1,6 +1,6 @@
 {
   "name": "@ngui/tooltip",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Angular2 Tooltip Directive",
   "license": "MIT",
   "main": "dist/tooltip.umd.js",

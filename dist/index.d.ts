@@ -1,3 +1,3 @@
-import { Ng2TooltipComponent } from "./ng2-tooltip-component";
-import { Ng2TooltipOverlayModule } from './ng2-tooltip-overlay.module';
-export { Ng2TooltipComponent, Ng2TooltipOverlayModule };
+import { NguiTooltipDirective } from "./tooltip-directive";
+import { NguiTooltipModule } from './tooltip.module';
+export { NguiTooltipDirective, NguiTooltipModule };
